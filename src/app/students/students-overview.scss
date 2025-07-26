@@ -1,0 +1,155 @@
+.students-page-container {
+  max-width: 1200px;
+  margin: 2.5rem auto;
+  padding: 0 1.5rem;
+}
+
+.students-table-card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 4px 24px 0 rgba(44, 44, 84, 0.10);
+  padding: 0 0 1.5rem 0;
+  overflow: hidden;
+}
+
+.students-header-bar {
+  background: #6c547b;
+  color: #fff;
+  padding: 1.1rem 2rem;
+  font-size: 1.15rem;
+  font-weight: 600;
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.students-header-bar .add-btn {
+  background: #fff;
+  color: #6c547b;
+  border: none;
+  font-weight: 600;
+  border-radius: 6px;
+  padding: 0.4rem 1.2rem;
+  font-size: 1rem;
+  box-shadow: 0 1px 4px 0 rgba(44, 44, 84, 0.08);
+  transition: background 0.2s, color 0.2s;
+}
+
+.students-header-bar .add-btn:hover {
+  background: #f3eaff;
+  color: #4a3a5a;
+}
+
+.students-table ::ng-deep .p-datatable {
+  border-radius: 0 0 14px 14px;
+  box-shadow: none;
+  border: none;
+}
+
+.students-table ::ng-deep .p-datatable-thead>tr>th {
+  background: #f7f5fa;
+  color: #6c547b;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  padding: 0.85rem 1.2rem;
+}
+
+.students-table ::ng-deep .p-datatable-tbody>tr>td {
+  font-size: 1rem;
+  color: #3a3a4a;
+  border: none;
+  padding: 0.8rem 1.2rem;
+  background: #fff;
+}
+
+.students-table ::ng-deep .p-datatable-tbody>tr {
+  transition: background 0.2s;
+}
+
+.students-table ::ng-deep .p-datatable-tbody>tr:hover {
+  background: #f3eaff;
+}
+
+.students-table ::ng-deep .p-paginator {
+  background: transparent;
+  border: none;
+  margin-top: 0.5rem;
+  justify-content: flex-end;
+  padding-right: 1.5rem;
+}
+
+.course-pill {
+  display: inline-block;
+  background: #e5e0f7;
+  color: #6c547b;
+  border-radius: 12px;
+  padding: 0.18rem 0.85rem;
+  font-size: 0.93rem;
+  font-weight: 500;
+  margin-right: 0.25rem;
+  margin-bottom: 0.1rem;
+}
+
+.p-button-sm {
+  font-size: 1.1rem;
+  padding: 0.3rem 0.7rem;
+}
+
+.p-button-danger {
+  color: #6c547b !important;
+  background: #f87171 !important;
+  border: none !important;
+}
+
+.p-button-text {
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.p-dialog {
+  border-radius: 12px !important;
+  margin-top: 24px !important;
+  margin-bottom: 24px !important;
+  margin-left: 24px !important;
+  margin-right: 24px !important;
+  padding: 16px !important;
+}
+
+.p-fluid .p-field {
+  margin-bottom: 1.2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.p-field label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.4rem;
+  color: #6c547b;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+.p-inputtext,
+.p-multiselect {
+  width: 100%;
+  font-size: 1rem;
+  border-radius: 6px;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+.dialog-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.p-button {
+  min-width: 90px;
+}

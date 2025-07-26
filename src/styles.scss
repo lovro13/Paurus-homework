@@ -1,1 +1,83 @@
-/* You can add global styles to this file, and also import other style files */
+// Dialog improvements for students feature
+.students-dialog .p-dialog-content {
+  background: #e5e0f7 !important; // light violet
+  border-radius: 0 0 12px 12px !important;
+  box-shadow: none !important;
+  padding: 2rem 2rem 1rem 2rem !important;
+}
+
+// Make dialog header match theme
+.students-dialog .p-dialog-header {
+  background-color: #6c547b !important; // deep violet
+  color: #fff !important;
+  border-radius: 12px 12px 0 0 !important;
+  padding: 1.5rem 2rem 0.5rem 2rem !important;
+  border-bottom: 1px solid #000000 !important;
+}
+
+// Improve course selection appearance
+.students-dialog .p-multiselect {
+  background: #fff !important;
+  border: 2px solid #b39ddb !important;
+  border-radius: 8px !important;
+  font-size: 1rem;
+  color: #6c547b !important;
+}
+.students-dialog .p-multiselect .p-multiselect-label {
+  color: #6c547b !important;
+}
+.students-dialog .p-multiselect-panel {
+  background: #f7f5fa !important;
+  border: 1.5px solid #b39ddb !important;
+  min-width: 500px !important;
+  max-height: 220px !important;
+  font-size: 1.05rem;
+  overflow-y: auto !important;
+  overscroll-behavior: contain;
+}
+.students-dialog .p-multiselect-item {
+  color: #6c547b !important;
+  border-radius: 6px;
+  margin: 2px 0;
+}
+.students-dialog .p-multiselect-item.p-highlight {
+  background: #d1c4e9 !important;
+  color: #4a3a5a !important;
+  padding: 0.7rem 1rem !important;
+}
+
+// Make dialog buttons more visible
+.students-dialog .p-button-primary {
+  background: #6c547b !important;
+  color: #fff !important;
+  border: 2px solid #4a3a5a !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  box-shadow: 0 2px 8px 0 rgba(44, 44, 84, 0.1);
+}
+.students-dialog .p-button-primary:enabled:hover {
+  background: #8e24aa !important;
+  border-color: #6c547b !important;
+}
+.students-dialog .p-button-text {
+  color: #6c547b !important;
+  border: 2px solid #b39ddb !important;
+  border-radius: 8px !important;
+  background: #fff !important;
+  font-weight: 600;
+}
+.students-dialog .p-button-text:enabled:hover {
+  background: #ede7f6 !important;
+  border-color: #6c547b !important;
+}
+
+
+.students-dialog .p-multiselect-panel::-webkit-scrollbar {
+  width: 0 !important;
+  background: transparent !important;
+}
+.students-dialog .p-multiselect-panel {
+  scrollbar-width: none !important; /* Firefox */
+  -ms-overflow-style: none !important; /* IE/Edge */
+}
+

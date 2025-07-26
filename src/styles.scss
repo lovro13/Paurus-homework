@@ -1,3 +1,6 @@
+body {
+  background: #f2e9ff;
+}
 // Dialog improvements for students feature
 .students-dialog .p-dialog-content {
   background: #e5e0f7 !important; // light violet
@@ -79,5 +82,13 @@
 .students-dialog .p-multiselect-panel {
   scrollbar-width: none !important; /* Firefox */
   -ms-overflow-style: none !important; /* IE/Edge */
+}
+
+.p-paginator-page.p-paginator-page-selected {
+  background: #6c547b !important;
+  border-color: #6c547b !important;
+  color: #fff !important;
+  font-weight: 700 !important;
+  box-shadow: 0 2px 8px 0 rgba(44, 44, 84, 0.10) !important;
 }
 

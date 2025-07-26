@@ -1,14 +1,41 @@
 .students-page-container {
-  max-width: 1200px;
+  max-width: 100%;
   margin: 2.5rem auto;
   padding: 0 1.5rem;
+}
+
+.page-header {
+  background: #6c547b;
+  color: #fff;
+  padding: 2rem 1.5rem;
+  margin: 0;
+  text-align: left;
+  position: relative;
+  left: 50%;
+  width: 100vw;
+  transform: translateX(-50%);
+  
+  h1 {
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+    letter-spacing: -0.5px;
+  }
+  
+  p {
+    color: #e5e0f7;
+    font-size: 1.1rem;
+    margin: 0;
+    font-weight: 400;
+  }
 }
 
 .students-table-card {
   background: #fff;
   border-radius: 14px;
   box-shadow: 0 4px 24px 0 rgba(44, 44, 84, 0.10);
-  padding: 0 0 1.5rem 0;
+  padding: 0 0 1  rem 0;
   overflow: hidden;
 }
 
@@ -49,36 +76,87 @@
 }
 
 .students-table ::ng-deep .p-datatable-thead>tr>th {
-  background: #f7f5fa;
-  color: #6c547b;
+  background: #e5e0f7;
+  color: #4a3a5a;
   font-weight: 600;
   font-size: 1rem;
   border: none;
-  padding: 0.85rem 1.2rem;
+  padding: 0.5rem 0.7rem;
 }
 
 .students-table ::ng-deep .p-datatable-tbody>tr>td {
   font-size: 1rem;
-  color: #3a3a4a;
+  color: #6c547b;
   border: none;
-  padding: 0.8rem 1.2rem;
-  background: #fff;
+  padding: 0.4rem 0.7rem;
+  background: #f7f5fa;
 }
 
 .students-table ::ng-deep .p-datatable-tbody>tr {
+  background: #f7f5fa;
   transition: background 0.2s;
 }
 
 .students-table ::ng-deep .p-datatable-tbody>tr:hover {
-  background: #f3eaff;
+  background: #e5e0f7;
 }
 
 .students-table ::ng-deep .p-paginator {
-  background: transparent;
+  background: #f7f5fa;
   border: none;
-  margin-top: 0.5rem;
-  justify-content: flex-end;
-  padding-right: 1.5rem;
+  margin-top: 1rem;
+  justify-content: center;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px 0 rgba(44, 44, 84, 0.05);
+
+  .p-paginator-page,
+  .p-paginator-first,
+  .p-paginator-prev,
+  .p-paginator-next,
+  .p-paginator-last {
+    background: #fff;
+    border: 1px solid #e5e0f7;
+    color: #6c547b;
+    border-radius: 6px;
+    margin: 0 0.2rem;
+    min-width: 2.5rem;
+    height: 2.5rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+
+    &:hover {
+      background: #e5e0f7;
+      border-color: #b39ddb;
+      color: #4a3a5a;
+    }
+
+    &:disabled {
+      background: #f0f0f0;
+      border-color: #e0e0e0;
+      color: #999;
+      cursor: not-allowed;
+    }
+  }
+
+  .p-paginator-page.p-highlight {
+    background: #6c547b;
+    border-color: #6c547b;
+    color: #fff;
+    font-weight: 600;
+  }
+
+  .p-dropdown {
+    background: #fff;
+    border: 1px solid #e5e0f7;
+    border-radius: 6px;
+    color: #6c547b;
+    font-weight: 500;
+
+    &:hover {
+      border-color: #b39ddb;
+    }
+  }
 }
 
 .course-pill {

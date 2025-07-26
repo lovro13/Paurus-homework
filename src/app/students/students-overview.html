@@ -1,3 +1,8 @@
+<div class="page-header">
+  <h1>Student Management System</h1>
+  <p>Manage student information and courses</p>
+</div>
+
 <div class="students-page-container">
   <div class="students-table-card">
     <div class="students-header-bar">
@@ -5,8 +10,8 @@
       <button pButton type="button" label="Add Student" icon="pi pi-plus" class="add-btn"
         (click)="showAddDialog()"></button>
     </div>
-    <p-table [value]="students" [paginator]="true" [rows]="rows" [first]="first" [rowsPerPageOptions]="[20]"
-      (onPage)="onPage($event)" class="students-table" [style]="{ 'margin-top': '0' }">
+    <p-table [value]="students" [paginator]="true" [rows]="rows" [first]="first"
+      (onPage)="onPage($event)" class="students-table">
       <ng-template pTemplate="header">
         <tr>
           <th>Name</th>
@@ -36,7 +41,7 @@
   </div>
 
   <p-dialog header="{{ dialogMode === 'add' ? 'Add Student' : 'Edit Student' }}" [(visible)]="displayDialog"
-    [modal]="true" [closable]="false" [style]="{ width: '400px' }">
+    [modal]="true" [closable]="false" [style]="{ width: '400px' }" styleClass="students-dialog">
     <form (ngSubmit)="saveStudent()">
       <div class="p-fluid">
         <div class="p-field" *ngIf="dialogMode === 'add'">
@@ -50,14 +55,30 @@
         </div>
         <div class="p-field">
           <label for="student-courses">Courses</label>
-          <p-multiSelect id="student-courses" [options]="coursesOptions" [(ngModel)]="studentForm.courses"
-            name="courses" defaultLabel="Select courses" [showClear]="true" [display]="'chip'"></p-multiSelect>
+          <div id="student-courses" class="courses-checkbox-group">
+            <div *ngFor="let course of coursesList" style="display: flex; align-items: center; margin-bottom: 0.5rem;">
+              <input type="checkbox"
+                     #cb
+                     [id]="'course-' + course"
+                     [value]="course"
+                     name="courses"
+                     (change)="onCourseCheckboxChange(course, cb.checked)"
+                     [checked]="studentForm.courses?.includes(course)"
+                     style="margin-right: 0.5em;" />
+              <label [for]="'course-' + course" style="margin: 0;">{{ course }}</label>
+            </div>
+          </div>
         </div>
       </div>
       <div class="dialog-footer">
-        <button pButton type="button" label="Cancel" class="p-button-text" (click)="cancelDialog()"></button>
-        <button pButton type="submit" label="Save" class="p-button-primary"
-          [disabled]="dialogMode === 'add' && (!studentForm.name || !studentForm.email)"></button>
+        <ng-container *ngIf="dialogMode === 'add'; else editFooter">
+          <button pButton type="button" label="Cancel" class="p-button-text" (click)="cancelDialog()"></button>
+          <button pButton type="submit" label="Save" class="p-button-primary"
+            [disabled]="dialogMode === 'add' && (!studentForm.name || !studentForm.email)"></button>
+        </ng-container>
+        <ng-template #editFooter>
+          <button pButton type="button" label="OK" class="p-button-primary" (click)="cancelDialog()"></button>
+        </ng-template>
       </div>
     </form>
   </p-dialog>
